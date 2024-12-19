@@ -2,7 +2,8 @@
   "name": "tdddemo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "stingCalculator.js",
+  "type": "module",
   "scripts": {
     "test": "mocha"
   },
