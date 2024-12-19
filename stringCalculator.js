@@ -1,7 +1,14 @@
 export const add = (numbers) => {
   if (numbers === "") return 0;
+
   let delimiter = /[,\n]/;
   let numbersToAdd = numbers;
+
+  if (numbers.startsWith("//")) {
+    const delimiterEnd = numbers.indexOf("\n");
+    delimiter = new RegExp(numbers.substring(2, delimiterEnd));
+    numbersToAdd = numbers.substring(delimiterEnd + 1);
+  }
 
   const nums = numbersToAdd
     .split(delimiter)
